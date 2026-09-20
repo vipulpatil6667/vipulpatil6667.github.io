@@ -178,12 +178,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; let
   position: absolute;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
 }
 .hero__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 62% 40%;
+  transform-origin: 62% 42%;
+  animation: ken-hero 28s ease-in-out infinite alternate;
+  will-change: transform;
 }
 .hero__veil {
   position: absolute;
@@ -191,6 +195,16 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; let
   background:
     linear-gradient(180deg, rgba(7,20,16,0.35) 0%, rgba(7,20,16,0.2) 32%, rgba(7,20,16,0.82) 72%, var(--bg) 100%),
     linear-gradient(90deg, rgba(7,20,16,0.78) 0%, rgba(7,20,16,0.28) 55%, rgba(7,20,16,0.45) 100%);
+}
+.hero__glow {
+  position: absolute;
+  inset: -10%;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 42% 38% at 68% 38%, rgba(78, 224, 176, 0.22), transparent 62%),
+    radial-gradient(ellipse 28% 24% at 48% 52%, rgba(224, 192, 122, 0.1), transparent 70%);
+  animation: glow-breathe 9s ease-in-out infinite;
+  mix-blend-mode: screen;
 }
 .hero__inner { max-width: 860px; }
 .kicker {
@@ -210,6 +224,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; let
   border-radius: 50%;
   background: var(--teal);
   box-shadow: 0 0 10px var(--teal);
+  animation: pulse-dot 2.8s ease-in-out infinite;
 }
 .hero__role {
   display: block;
@@ -541,11 +556,21 @@ section { padding: 5.5rem var(--pad); }
   align-items: center;
 }
 .edu__visual { margin: 0; }
-.edu__visual img {
-  width: 100%;
-  border-radius: 18px;
+.frame--lab {
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+.frame--lab img {
+  animation: ken-lab 26s ease-in-out infinite alternate;
+}
+.frame--lab::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 32% 42%, rgba(78, 224, 176, 0.18), transparent 46%);
+  animation: glow-breathe 10s ease-in-out infinite;
+  mix-blend-mode: screen;
 }
 .edu__list { list-style: none; margin: 0; padding: 0; }
 .edu__list li {
@@ -654,6 +679,31 @@ section { padding: 5.5rem var(--pad); }
 }
 @keyframes rise {
   to { opacity: 1; transform: none; }
+}
+@keyframes ken-hero {
+  from { transform: scale(1.06) translate(0, 0); }
+  to { transform: scale(1.16) translate(-2.2%, 1.4%); }
+}
+@keyframes ken-vr {
+  from { transform: scale(1.04) translate(0, 0); }
+  to { transform: scale(1.12) translate(1.6%, -1.2%); }
+}
+@keyframes ken-lab {
+  from { transform: scale(1.03) rotate(0deg); }
+  to { transform: scale(1.1) rotate(-1.2deg); }
+}
+@keyframes glow-breathe {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.9; }
+}
+@keyframes hologram-scan {
+  0% { background-position: 0% -20%; opacity: 0.25; }
+  50% { opacity: 0.7; }
+  100% { background-position: 0% 120%; opacity: 0.2; }
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 8px var(--teal); }
+  50% { transform: scale(1.35); box-shadow: 0 0 16px var(--teal); }
 }
 
 @media (hover: none) {
