@@ -4,7 +4,7 @@ Scientific content writer, Biology SME, and EdTech / VR learning specialist base
 
 This repository is the source for the public site on GitHub Pages.
 
-**Live site:** https://USERNAME.github.io/vipul-patil-portfolio/
+**Live site:** https://vipulpatil6667.github.io/
 
 - Email: vipulpatil6667@gmail.com
 - LinkedIn: [vipul-patil-552500106](https://www.linkedin.com/in/vipul-patil-552500106)
