@@ -1,6 +1,6 @@
 # Vipul Patil — Portfolio
 
-Scientific content writer, Biology SME, and EdTech / VR learning specialist based in Bhopal, India.
+Biology Subject Matter Expert and AI Scientific Evaluator based in Bhopal, India.
 
 This repository is the source for the public site on GitHub Pages.
 
@@ -8,3 +8,4 @@ This repository is the source for the public site on GitHub Pages.
 
 - Email: vipulpatil6667@gmail.com
 - LinkedIn: [vipul-patil-552500106](https://www.linkedin.com/in/vipul-patil-552500106)
+- CV: [Vipul_Patil_CV.pdf](./assets/Vipul_Patil_CV.pdf)
