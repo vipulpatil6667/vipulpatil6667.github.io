@@ -229,12 +229,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; let
 .hero__role {
   display: block;
   font-family: var(--sans);
-  font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+  font-size: clamp(0.72rem, 1.15vw, 0.86rem);
   font-weight: 400;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--teal);
   margin-bottom: 0.4rem;
+  max-width: 46rem;
+  line-height: 1.45;
 }
 .hero__name {
   display: block;
