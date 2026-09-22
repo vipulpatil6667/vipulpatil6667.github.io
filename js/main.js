@@ -54,7 +54,7 @@
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
     document
-      .querySelectorAll(".practice__fig, .practice__copy, .work__card, .skills article, .job, .edu__visual, .edu__list li, .form, .contact__intro")
+      .querySelectorAll(".practice__fig, .practice__copy, .work__card, .core article, .skills article, .job, .edu__visual, .edu__list li, .form, .contact__intro")
       .forEach((el, i) => {
         el.style.animationDelay = `${(i % 4) * 80}ms`;
         io.observe(el);

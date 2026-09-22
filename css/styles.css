@@ -463,6 +463,44 @@ section { padding: 5.5rem var(--pad); }
 
 /* EXPERTISE */
 .expertise { background: var(--bg); }
+.core {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  max-width: var(--max);
+  margin-bottom: 2.8rem;
+}
+.core article {
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem 1.45rem 1.6rem;
+}
+.core h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.9rem;
+  color: var(--gold);
+}
+.core ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.core li {
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: #d5e6dc;
+  border: 1px solid var(--line);
+  background: rgba(78, 224, 176, 0.06);
+  padding: 0.38rem 0.65rem;
+  border-radius: 999px;
+}
+.core__label {
+  margin: 0 0 0.9rem;
+}
 .skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -716,12 +754,13 @@ section { padding: 5.5rem var(--pad); }
   .practice__grid,
   .work,
   .skills,
+  .core,
   .edu,
   .contact__grid,
   .hero__stats {
     grid-template-columns: 1fr 1fr;
   }
-  .work, .skills { grid-template-columns: 1fr; }
+  .work, .skills, .core { grid-template-columns: 1fr; }
   .hero__stats { grid-template-columns: 1fr 1fr; }
   .job { grid-template-columns: 1fr; gap: 0.4rem; }
   .hero__scroll { display: none; }
